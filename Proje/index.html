@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sticky-menu">
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="sticky-ad left-ad">
+        <a href="https://www.nike.com/" target="_blank">
+            <img src="ads.png" alt="Left Ad">
+        </a>
+        <button class="close-ad" onclick="closeAd('left-ad')">X</button>
+    </div>
+
+    <div class="sticky-ad right-ad">
+        <a href="https://www.nike.com/" target="_blank">
+            <img src="ads.png" alt="Right Ad">
+        </a>
+        <button class="close-ad" onclick="closeAd('right-ad')">X</button>
+    </div>
+
+    <div class="form-container">
+        <form id="registrationForm">
+            <div class="name-fields">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="phone-field">
+                <select id="areaCode" name="areaCode" required>
+                    <option value="">Area Code</option>
+                </select>
+                <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+            </div>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <select id="company" name="company" required>
+                <option value="">Select Company</option>
+            </select>
+            <select id="subject" name="subject" required>
+                <option value="">Select Subject</option>
+            </select>
+            <div class="radio-field">
+                <label>Are you a beginner?</label>
+                <label><input type="radio" name="level" value="yes" required> Yes</label>
+                <label><input type="radio" name="level" value="no" required> No</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
