@@ -33,17 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("#registrationForm");
     const phoneInput = document.querySelector("#phoneNumber");
     const areaCodeSelect = document.querySelector("#areaCode");
-    const emailInput = document.querySelector("#email");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
         const selectedAreaCode = areaCodeSelect.value.trim();
         const phoneValue = phoneInput.value.trim();
-        const emailValue = emailInput.value.trim();
 
         const phoneRegex = /^\d{7}$/;
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let isValid = true;
 
         if (!selectedAreaCode) {
@@ -66,18 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             phoneInput.setCustomValidity("");
         }
 
-        if (!emailValue) {
-            emailInput.setCustomValidity("Please fill out this field.");
-            emailInput.reportValidity();
-            isValid = false;
-        } else if (!emailRegex.test(emailValue)) {
-            emailInput.setCustomValidity("Please enter a valid email address.");
-            emailInput.reportValidity();
-            isValid = false;
-        } else {
-            emailInput.setCustomValidity("");
-        }
-
         if (isValid) {
             window.location.href = "form-submitted.html";
         }
@@ -92,36 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    emailInput.addEventListener("input", function () {
-        const emailValue = emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (emailValue && emailRegex.test(emailValue)) {
-            emailInput.setCustomValidity("");
-        }
-    });
-
     areaCodeSelect.addEventListener("change", function () {
         if (areaCodeSelect.value.trim()) {
             areaCodeSelect.setCustomValidity("");
         }
     });
-
-    const closeAd = (adId) => {
-        const adElement = document.getElementById(adId);
-        if (adElement) {
-            adElement.style.display = "none";
-        }
-    };
-
-    const leftAdCloseButton = document.querySelector("#leftAd .close-ad");
-    const rightAdCloseButton = document.querySelector("#rightAd .close-ad");
-
-    if (leftAdCloseButton) {
-        leftAdCloseButton.addEventListener("click", () => closeAd("leftAd"));
-    }
-
-    if (rightAdCloseButton) {
-        rightAdCloseButton.addEventListener("click", () => closeAd("rightAd"));
-    }
 });
