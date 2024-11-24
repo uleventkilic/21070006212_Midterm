@@ -90,14 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    const leftAdCloseButton = document.querySelector("#leftAd .close-ad");
-    const rightAdCloseButton = document.querySelector("#rightAd .close-ad");
+    const leftAdButton = document.querySelector("#leftAd .close-ad");
+    const rightAdButton = document.querySelector("#rightAd .close-ad");
 
-    if (leftAdCloseButton) {
-        leftAdCloseButton.addEventListener("click", () => closeAd("leftAd"));
+    if (leftAdButton) {
+        leftAdButton.addEventListener("click", () => closeAd("leftAd"));
     }
 
-    if (rightAdCloseButton) {
-        rightAdCloseButton.addEventListener("click", () => closeAd("rightAd"));
+    if (rightAdButton) {
+        rightAdButton.addEventListener("click", () => closeAd("rightAd"));
     }
 });
