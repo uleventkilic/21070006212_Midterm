@@ -82,4 +82,22 @@ document.addEventListener("DOMContentLoaded", function () {
             areaCodeSelect.setCustomValidity("");
         }
     });
+
+    const closeAd = (adId) => {
+        const adElement = document.getElementById(adId);
+        if (adElement) {
+            adElement.style.display = "none";
+        }
+    };
+
+    const leftAdCloseButton = document.querySelector("#leftAd .close-ad");
+    const rightAdCloseButton = document.querySelector("#rightAd .close-ad");
+
+    if (leftAdCloseButton) {
+        leftAdCloseButton.addEventListener("click", () => closeAd("leftAd"));
+    }
+
+    if (rightAdCloseButton) {
+        rightAdCloseButton.addEventListener("click", () => closeAd("rightAd"));
+    }
 });
