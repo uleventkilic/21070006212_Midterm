@@ -1,4 +1,3 @@
-/* General Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,7 +6,6 @@ body, html {
     background-size: cover;
 }
 
-/* Sticky Menu */
 .sticky-menu {
     position: fixed;
     top: 0;
@@ -40,7 +38,6 @@ body, html {
     background-color: #0056b3;
 }
 
-/* Sticky Ads */
 .sticky-ad {
     position: fixed;
     top: 50px;
@@ -87,7 +84,6 @@ body, html {
     background-color: darkgray;
 }
 
-/* Form Container */
 .form-container {
     width: 40%;
     margin: 100px auto;
@@ -151,7 +147,6 @@ button:hover {
     background-color: #004494;
 }
 
-/* Updated Radio Button Styles */
 .radio-field {
     display: flex;
     align-items: center;
@@ -203,7 +198,6 @@ button:hover {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .form-container {
         width: 90%;
