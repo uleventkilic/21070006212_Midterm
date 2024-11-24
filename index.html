@@ -16,18 +16,18 @@
         </ul>
     </nav>
 
-    <div class="sticky-ad left-ad">
+    <div class="sticky-ad" id="leftAd">
         <a href="https://www.nike.com/" target="_blank">
             <img src="ads.png" alt="Left Ad">
         </a>
-        <button class="close-ad" onclick="closeAd('left-ad')">X</button>
+        <button class="close-ad">X</button>
     </div>
 
-    <div class="sticky-ad right-ad">
+    <div class="sticky-ad" id="rightAd">
         <a href="https://www.nike.com/" target="_blank">
             <img src="ads.png" alt="Right Ad">
         </a>
-        <button class="close-ad" onclick="closeAd('right-ad')">X</button>
+        <button class="close-ad">X</button>
     </div>
 
     <div class="form-container">
@@ -38,7 +38,7 @@
             </div>
             <div class="phone-field">
                 <select id="areaCode" name="areaCode" required>
-                    <option value="">Area Code</option>
+                    <option value="" disabled selected>Area Code</option>
                 </select>
                 <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
             </div>

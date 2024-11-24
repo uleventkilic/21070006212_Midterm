@@ -83,21 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    const closeAd = (adId) => {
-        const adElement = document.getElementById(adId);
-        if (adElement) {
-            adElement.style.display = "none";
-        }
-    };
-
-    const leftAdButton = document.querySelector("#leftAd .close-ad");
-    const rightAdButton = document.querySelector("#rightAd .close-ad");
-
-    if (leftAdButton) {
-        leftAdButton.addEventListener("click", () => closeAd("leftAd"));
-    }
-
-    if (rightAdButton) {
-        rightAdButton.addEventListener("click", () => closeAd("rightAd"));
-    }
+    document.querySelectorAll(".close-ad").forEach(button => {
+        button.addEventListener("click", function () {
+            const ad = button.parentElement;
+            if (ad) {
+                ad.style.display = "none";
+            }
+        });
+    });
 });
