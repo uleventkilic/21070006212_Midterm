@@ -16,18 +16,18 @@
         </ul>
     </nav>
 
-    <div class="sticky-ad left-ad">
+    <div class="sticky-ad left-ad" id="leftAd">
         <a href="https://www.nike.com/" target="_blank">
             <img src="ads.png" alt="Left Ad">
         </a>
-        <button class="close-ad" onclick="closeAd('left-ad')">X</button>
+        <button class="close-ad" onclick="closeAd('leftAd')">X</button>
     </div>
 
-    <div class="sticky-ad right-ad">
+    <div class="sticky-ad right-ad" id="rightAd">
         <a href="https://www.nike.com/" target="_blank">
             <img src="ads.png" alt="Right Ad">
         </a>
-        <button class="close-ad" onclick="closeAd('right-ad')">X</button>
+        <button class="close-ad" onclick="closeAd('rightAd')">X</button>
     </div>
 
     <div class="form-container">
@@ -40,9 +40,9 @@
                 <select id="areaCode" name="areaCode" required>
                     <option value="">Area Code</option>
                 </select>
-                <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
             </div>
-            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
             <select id="company" name="company" required>
                 <option value="">Select Company</option>
             </select>
@@ -51,13 +51,12 @@
             </select>
             <div class="radio-field">
                 <label>Are you a beginner?</label>
-                <label><input type="radio" name="level" value="yes" required> Yes</label>
-                <label><input type="radio" name="level" value="no" required> No</label>
+                <label><input type="radio" name="beginner" value="yes" required> Yes</label>
+                <label><input type="radio" name="beginner" value="no" required> No</label>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Register</button>
         </form>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
